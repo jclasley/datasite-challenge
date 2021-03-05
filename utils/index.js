@@ -6,11 +6,7 @@ module.exports.join = (userObj, projectObj) => {
       ...user,
       projectIds: [],
     }
-    joined.projectIds = projectObj.map(({id, userId}) => {
-      if (userId === user.id) {
-        return id;
-      };
-    }).filter(x => x)
+    joined.projectIds = projectObj.reduce((m, i) => userId === i.id ? [...m, i.id] : m, [])
     return joined;
   });
   return projects;
