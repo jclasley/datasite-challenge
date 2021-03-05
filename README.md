@@ -100,6 +100,7 @@ Build a dockerfile and include instructions how to build the image, start the co
 ```
 
 `docker run -dp 8080:8080 jclasley/datasitechallenge`
+
 `curl localhost:8080/api/alldata`
 
 Posted on dockerhub so you don't need to `docker build`!
