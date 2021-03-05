@@ -1,4 +1,3 @@
-const { join, promisifyGet } = require('../utils/index');
 const http = require('http');
 const supertest = require('supertest');
 const server = require('./index');
