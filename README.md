@@ -65,24 +65,45 @@ Provide the instructions below.  Please double check your instruction to make ce
 
 **Required components for running the application in development mode**
 ```
-Tell us what componenets we need to run your solution locally
+Tell us what components we need to run your solution locally
 ```
+<ins>Running</ins>
+
+Node
+
+<ins>Testing</ins>
+
+Jest, Supertest
 
 **Install**
 ```
 Tell us what commands we have to run to install your solution dependencies locally
 ```
+If only running for functionality, nothing
+If you are wanting to run `npm run test`, you will need to `npm i` and possibly `npm i -g jest` which will globally install jest for CLI use. You can read more about global installation [here](https://docs.npmjs.com/downloading-and-installing-packages-globally) if you'd like to remove jest after installation.
 
 **Start the internal application in development mode**
 ```
 Tell us what commands/things we have to do to run your solution locally
 Tell us what commands/things we have to do to execute the endpoint locally 
 ```
+Ensure port 8080 is available then `npm run start`
+
+If you have issues with 8080, try `<PORT #> nodemon server/start.js`, which will change the env variable and run on that port
+
+To execute the endpoint: `curl localhost:<PORT>/api/alldata`
+
 
 **Optional but would really impress us**
 ```
 Build a dockerfile and include instructions how to build the image, start the container and execute the endpoint for that container locally
 ```
+
+`docker run -dp 8080:8080 jclasley/datasitechallenge`
+`curl localhost:8080/api/alldata`
+
+Posted on dockerhub so you don't need to `docker build`!
+
 **Informational**
 ```
 Tell us anything else we should know

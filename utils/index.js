@@ -13,7 +13,6 @@ module.exports.join = (userObj, projectObj) => {
     }).filter(x => x)
     return joined;
   });
-  console.log(projects);
   return projects;
 }
 
